@@ -1,3 +1,6 @@
+<div>
+<link rel='stylesheet' type='text/css' href='index.css'
+>
 <form action='confirm.php' method='post'>
 <label>nanter</label>
 <input type='checkbox' value='nanter' name='myarray[]'>
@@ -15,3 +18,4 @@
 <br>
 
 </form>
+</div>
