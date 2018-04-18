@@ -1,4 +1,7 @@
 <?php
 $myA=$_POST['myarray'];
-echo $myA[0];
+foreach($myA as $a){
+	echo $a;
+
+}
 ?>
