@@ -1,6 +1,13 @@
 div{
 	height:300px;
 	background-color:blue;
+	margin:0px;
+	transitions:all 2s;
 
+}
 
+div:hover{
+	background-color:purple;
+	transitions:all 2s;
+	height:100px;	
 }

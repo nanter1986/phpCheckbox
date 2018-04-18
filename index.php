@@ -1,3 +1,6 @@
+<?php
+	require('top.php');
+?>
 <div>
 <link rel='stylesheet' type='text/css' href='index.css'
 >
