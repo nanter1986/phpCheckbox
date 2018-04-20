@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <form action='confirmInput.php' method='post'>
 <label>Name</label>
 <input type='text' value='' name='name'>
@@ -18,15 +21,15 @@ class MyDB extends SQLite3 {
 	function __construct() {
 		$this->open('names.db');
 	}
-   }
-   
-   $db = new MyDB();
-   if(!$db){
-      echo $db->lastErrorMsg();
-   } else {
-      echo "Opened database successfully\n";
-   }
-$total=0;
+}
+
+$db = new MyDB();
+if(!$db){
+	echo $db->lastErrorMsg();
+} else {
+	echo "Opened database successfully\n";
+}
+$total=1;
 $result=$db->query('select * from people');
 while($row=$result->fetchArray(SQLITE3_ASSOC)){
 	echo $row['id'] . ".";
@@ -35,5 +38,5 @@ while($row=$result->fetchArray(SQLITE3_ASSOC)){
 	$total++;
 
 }
-$_POST['id']=$total;
+$_SESSION['id']=$total;
 ?>
