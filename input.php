@@ -1,19 +1,39 @@
 <form action='confirmInput.php' method='post'>
-<label>nanter</label>
-<input type='checkbox' value='nanter' name='myarray[]'>
+<label>Name</label>
+<input type='text' value='' name='name'>
 <br>
 
-<label>alina</label>
-<input type='checkbox' value='alina' name='myarray[]'>
-<br>
-
-<label>themis</label>
-<input type='checkbox' value='themis' name='myarray[]'>
+<label>Age</label>
+<input type='text' value='' name='age'>
 <br>
 
 <input type='submit' value='confirm'>
 <br>
 
-<a hrer='input.php'>add people</a>
 <br>
 </form>
+<?php
+
+class MyDB extends SQLite3 {
+	function __construct() {
+		$this->open('names.db');
+	}
+   }
+   
+   $db = new MyDB();
+   if(!$db){
+      echo $db->lastErrorMsg();
+   } else {
+      echo "Opened database successfully\n";
+   }
+$total=0;
+$result=$db->query('select * from people');
+while($row=$result->fetchArray(SQLITE3_ASSOC)){
+	echo $row['id'] . ".";
+	echo $row['name'] . "-";
+	echo $row['age'] . "<br>";
+	$total++;
+
+}
+$_POST['id']=$total;
+?>

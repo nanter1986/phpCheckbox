@@ -20,7 +20,7 @@ require('top.php');
 <input type='submit' value='confirm'>
 <br>
 
-<a hrer='input.php'>add people</a>
+<a href='input.php'>add people</a>
 <br>
 </form>
 </div>
