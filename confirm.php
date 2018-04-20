@@ -1,13 +1,14 @@
 <?php
+
 $myA=$_POST['myarray'];
 foreach($myA as $a){
 	echo $a . "<br>";
 
 }
 class MyDB extends SQLite3 {
-      function __construct() {
-         $this->open('names.db');
-      }
+	function __construct() {
+		$this->open('names.db');
+	}
    }
    
    $db = new MyDB();

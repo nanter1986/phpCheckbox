@@ -1,10 +1,4 @@
-<?php
-require('top.php');
-?>
-<div>
-<link rel='stylesheet' type='text/css' href='index.css'
->
-<form action='confirm.php' method='post'>
+<form action='confirmInput.php' method='post'>
 <label>nanter</label>
 <input type='checkbox' value='nanter' name='myarray[]'>
 <br>
@@ -23,4 +17,3 @@ require('top.php');
 <a hrer='input.php'>add people</a>
 <br>
 </form>
-</div>
