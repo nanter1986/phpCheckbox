@@ -34,7 +34,9 @@ $result=$db->query('select * from people');
 while($row=$result->fetchArray(SQLITE3_ASSOC)){
 	echo $row['id'] . ".";
 	echo $row['name'] . "-";
-	echo $row['age'] . "<br>";
+	echo $row['age'] . "-";
+	echo $row['registered'] . "<br>";
+
 	$total++;
 
 }
