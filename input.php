@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+<link rel="stylesheet" type="text/css" href="input.css">
 <form action='confirmInput.php' method='post'>
 <label>Name</label>
 <input type='text' value='' name='name'>
