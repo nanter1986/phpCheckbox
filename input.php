@@ -32,10 +32,12 @@ if(!$db){
 $total=1;
 $result=$db->query('select * from people');
 while($row=$result->fetchArray(SQLITE3_ASSOC)){
+	echo "<div>";
 	echo $row['id'] . ".";
 	echo $row['name'] . "-";
 	echo $row['age'] . "-";
 	echo $row['registered'] . "<br>";
+	echo "</div>";
 
 	$total++;
 
